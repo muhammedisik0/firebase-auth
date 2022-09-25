@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_authentication/pages/reset_password_page.dart';
 import 'package:firebase_authentication/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -50,6 +51,19 @@ class _LoginWidgetState extends State<LoginWidget> {
           child: const Text('Log in'),
         ),
         const SizedBox(height: 20),
+        GestureDetector(
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const ResetPasswordPage()),
+          ),
+          child: const Text(
+            'Forgot password?',
+            style: TextStyle(
+              color: Colors.blue,
+              decoration: TextDecoration.underline,
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -58,7 +72,7 @@ class _LoginWidgetState extends State<LoginWidget> {
             GestureDetector(
               onTap: widget.onTapSignUp,
               child: const Text(
-                'Sign Up',
+                'Sign up',
                 style: TextStyle(
                   color: Colors.blue,
                   decoration: TextDecoration.underline,

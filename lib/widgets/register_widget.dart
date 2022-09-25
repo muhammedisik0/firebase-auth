@@ -61,7 +61,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           ElevatedButton(
             onPressed: signUp,
             style: ElevatedButton.styleFrom(minimumSize: const Size(double.infinity, 50)),
-            child: const Text('Sign Up'),
+            child: const Text('Sign up'),
           ),
           const SizedBox(height: 20),
           Row(
